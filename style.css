@@ -1,0 +1,539 @@
+
+
+body {
+    font-family: 'Forum', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('img/novios.jpg');
+    background-size: cover;              /* Cubre toda la pantalla */
+    background-repeat: no-repeat;        /* No se repite */
+    background-position: center center;  /* Centrada */
+    background-attachment: scroll;       /* Se desplaza con el contenido */
+    overflow-x: hidden;
+    color: #333;
+  }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/novios.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+/* Flower Border Styles */
+/* body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; */
+    /* width: 290px; 
+    height: 100%;
+     background-image: url('img/nuevos_novios_de_espalda.jpg'); 
+     background-repeat: repeat-y; */
+     /* z-index: -1;   */
+/* }  */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal; /* para evitar que se vea muy gruesa */
+    color: #A17C4A; /* puedes cambiar este color si quieres */
+    font-size: 38px;
+  }
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+    transform: scaleX(-1); /* Mirror the image for the right side */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 960px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button,
+.boton-regalos,
+.rsvp-button,
+.guestbook button[type="submit"],
+#toggle-music {
+  background-color: transparent;
+  border: 1px solid #A17C4A; /* Borde dorado oscuro */
+  color: #A17C4A;            /* Texto dorado oscuro */
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+button:hover,
+.boton-regalos:hover,
+.rsvp-button:hover,
+.guestbook button[type="submit"]:hover,
+#toggle-music:hover {
+  background-color: #B29762;
+  color: white;
+}
+header {
+    padding: 0; /* Adjusted to remove padding from the main header */
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/anillos.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+.images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 400px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: 100%; /* Adjusted width */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+} */
+
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-dot.active {
+    background-color: #fff;
+  }
+
+.details {
+    margin-bottom: 20px;
+}
+
+.rsvp-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.rsvp-button:hover {
+    background-color: #3e8e41;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+  font-family: 'Great Vibes', cursive;
+    
+    }
+
+    footer p {
+        color: #A17C4A;
+        font-size: 28px;
+    }
+.countdown {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 80px;
+}
+
+.time span {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+}
+
+.time p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+#confirmar-btn {
+    background-color: #8C764B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #confirmar-btn:hover {
+    background-color: #a3855e;
+  }
+  
+  #confirmar-btn i {
+    font-size: 20px;
+    animation: pulse-heart 1.6s infinite;
+  }
+  
+  @keyframes pulse-heart {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.2); }
+  }
+  
+
+.modal-content {
+  background-color: #fffaf3;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Forum', serif;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#rsvp-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#rsvp-form input[type="text"],
+#rsvp-form input[type="email"],
+#rsvp-form input[type="number"],
+#rsvp-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Make sure padding doesn't affect width */
+}
+
+#rsvp-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#rsvp-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.invitation-paragraph {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.invitation-paragraph h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: #A17C4A; /* Ensure text is white */
+}
+
+.invitation-paragraph p {
+    /* font-size: 1.2em; */
+    color: 0000; /* Ensure text is white */
+}
+/* Timeline Styles */
+.timeline {
+    margin-bottom: 20px;
+}
+
+.timeline-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+   top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-time {
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    left: -100px;
+    top: 10px;
+    padding-right: 15px;
+}
+
+.timeline-item:nth-child(even) .timeline-time {
+    text-align: left;
+    right: -100px;
+    left: auto;
+    padding-left: 15px;
+}
+
+.timeline-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+  .copas {
+    font-size: 50px;
+    color: #b29762; /* dorado suave */
+    animation: cheers 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes cheers {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+  }
+
+  .ceremonia {
+    font-size: 24px;
+    color: #8C764B; /* dorado elegante */
+    margin-right: 8px;
+  }
+@media screen and (max-width: 768px) {
+
+    .timeline-container::after {
+        left: 3px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+
+    .timeline-time {
+        text-align: left;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 5px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) .timeline-time {
+        padding-left: 0;
+    }
+}
+
+/* Guestbook Styles */
+.guestbook {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.guestbook label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.guestbook textarea,
+.guestbook input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+#messages {
+    margin-top: 20px;
+    text-align: left;
+}
+
+
+.message {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.message-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.message-text {
+    margin: 0;
+}

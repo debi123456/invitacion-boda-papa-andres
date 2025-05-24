@@ -1,0 +1,204 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos Casamos!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/anillos.jpg" type="image/png">
+   
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <header>
+            <div class="hero-image">
+               
+            </div>
+        </header>
+
+        <section class="invitation-paragraph">
+            <h1> Angela & Marcelo</h1>
+            <p>¡Acompáñanos a celebrar nuestro amor!</p>
+            <p>Porque ustedes han sido parte de nuestras vidas, queremos que nos sigan acompañando y ahora sean parte de nuestra historia juntos, es por ello que con mucho cariño queremos invitarlos a que nos acompañen en este momento tan especial en nuestras vidas.</p>
+            <p> Por encima de todo, vistanse de amor, que es el vinculo perfecto". (Colosenses 3:14)</p>
+            
+            <!-- <p>Con inmensa alegría, queremos compartir con ustedes uno de los momentos más importantes de nuestras vidas. Los invitamos a acompañarnos en la celebración de nuestro matrimonio, donde el amor será el gran protagonista.</p> -->
+        </section>
+
+        <section class="countdown">
+            <h2>¡La cuenta regresiva ha comenzado!</h2>
+            <div id="countdown">
+                <div class="time">
+                    <span id="days"></span>
+                    <p>Días</p>
+                </div>
+                <div class="time">
+                    <span id="hours"></span>
+                    <p>Horas</p>
+                </div>
+                <div class="time">
+                    <span id="minutes"></span>
+                    <p>Minutos</p>
+                </div>
+                <div class="time">
+                    <span id="seconds"></span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="music">
+            <label for="background-music">Música de Fondo:</label>
+            <input type="file" id="background-music" name="background-music" accept="audio/*">
+            <audio id="audio-player" controls loop style="width: 100%; max-width: 300px;"></audio>
+        </section> -->
+
+        <audio id="bg-music" autoplay loop hidden>
+            <source src="audio/wedding-joy-boda.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+          </audio>
+          <button id="toggle-music" >
+  🔊 Silenciar música
+</button>
+          <!-- <button id="toggle-music"> 🔊 Silenciar música</button> -->
+
+         
+
+        <section class="details">
+            <h3>La Ceremonia</h3>
+            <i class="fas fa-church ceremonia"></i> Ceremonia religiosa
+            <p>Fecha: 25 de Octubre de 2025</p>
+            <p>Lugar: Parroquia del Espíritu Santo, Calle Pucón 700, Temuco</p>
+            <p>Hora: 17:00</p>
+            <button id="location-button" onclick="window.open('https://maps.app.goo.gl/VWwUbhjAXNfoVKj27', '_blank')">
+                Ver Ubicación en el Mapa 📍
+            </button>
+        
+        </section>
+            
+        <section class="dress-code">
+            <h3>Luego te Esperamos En Nuestra Fiesta Para Que Celebremos Todos Juntos.</h3>
+            <i class="fas fa-champagne-glasses copas"></i>
+            <p>Aunque nos gustan los niños esta será una celebración para mayores de 18 años.</p>
+            <p>"Saca tu mayor sonrisa y prepárate, ha llegado el momento de mostrar los pasos prohibidos"</p>
+            <p>Lugar: Centro de evento Rinconada del Carmen, ruta S-284 Kilómetro 3.4 Temuco.</p>
+            <p>Hora: 19:00</p>
+            <p>¿Donde?</p>
+            <button id="location-button" onclick="window.open('https://maps.app.goo.gl/8SPY1d38T6EtDA8Q7', '_blank')">
+                Ver Ubicación en el Mapa 📍
+              </button>
+              
+        </section>
+     
+
+        <section class="images">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="img/novios-1.jpg" alt="Imagen de la pareja 1" id="image1">
+                  <img src="img/novios-3.jpg" alt="Imagen de la pareja 3" id="image3">
+                    <img src="img/novios-2.jpg" alt="Imagen de la pareja 2" id="image2">
+                    <!-- <img src="img/fondo_rosas.jpg" alt="Imagen de la pareja 4" id="image4"> -->
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+        </section>
+        <div class="carousel-dots" id="carousel-dots"></div>
+        <h3>Te Esperamos</h3>
+        <p>Nos sentimos felices de compartir este momento tan especial contigo. Por favor, confirma tu asistencia a nuestra boda Hasta el 01 de Octubre, puedes llamar o completa el formulario a continuación:</p>
+        <section class="rsvp">
+            <p>Angela +56 9 34459716</p>
+            <p>Marcelo +56 9 93152281</p>
+            <button id="rsvp-button">Confirmar</button>
+        </section>
+        <div id="rsvp-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Confirmar Asistencia</h2>
+               
+                <p>Por favor, confirma tu asistencia a través del siguiente formulario de Google:</p>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSex2IMNgUw9wopEkF4FOIOHTRFcFXVRnEsa5gPWVFnA9P2BcA/viewform?embedded=true" width="640" height="1128" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+            </div>
+            
+        </div>
+       
+
+    <h2 style="margin-top: 30px; color: #A17C4A;">Regalos</h2>
+    <p>Nuestro mejor regalo es contar con su presencia, sin embargo, si quieren apoyarnos con un regalo aquí le dejamos nuestro código de novios.</p>
+    <a href="https://www.noviosparis.cl/home/couple-catalog/18484374" target="_blank">
+        <img src="img/Codigo_Novios.png" alt="codigo" style="margin-top:30px; display: block; margin: 20px auto; width: 200px; height: auto;">
+      </a>
+
+    <a href="https://www.noviosparis.cl/home/couple-catalog/18484374" target="_blank" class="boton-regalos">
+        Ver lista de regalos 🎁
+    </a>
+
+    <section class="details">
+        <h3>Reglas de nuestro matrimonio</h3>
+        <p>1. Vestimenta Formal.</p>
+        <p>2. Disfrutar al maximo.</p>
+        <p>3. Tener el vaso siempre lleno.</p>
+  </section>
+        <!-- <section class="timeline">
+            <h2>Cronograma del Día</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>Ceremonia</h3>
+                        <p>La ceremonia tendrá lugar en la Hacienda Paraíso.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3>Cóctel</h3>
+                        <p>Disfrute de un cóctel después de la ceremonia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">19:30</div>
+                    <div class="timeline-content">
+                        <h3>Cena</h3>
+                        <p>Cena formal en el salón principal.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-content">
+                        <h3>Fiesta</h3>
+                        <p>¡Baile y celebración!</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+        <section class="guestbook">
+            <h2>Muro de Mensajes</h2>
+            <form id="guestbook-form">
+                <label for="message">Deja tu mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <label for="guest-name">Tu Nombre:</label><br>
+                <input type="text" id="guest-name" name="guest-name" required><br><br>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+
+            <div id="messages">
+                <h3>Mensajes de Invitados</h3>
+                <!-- Messages will be displayed here -->
+            </div>
+        </section>
+
+        <footer>
+            <p>Con amor, Angela & Marcelo</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
